@@ -62,7 +62,6 @@ class DadosCompartilhados:
             self.novo_comando = False
             return target, tem_novo
 
-
 class CLP:
     def __init__(self, url=OPCUA_URL):
         self.url = url
@@ -172,9 +171,7 @@ def thread_opc(dados, stop_event):
         clp.disconnect()
         print("[CLP-OPC] Thread encerrada")
 
-############################
 # THREAD 2: Servidor TCP
-############################
 def thread_tcp(dados, stop_event):
     """
     Thread que gerencia servidor TCP/IP
